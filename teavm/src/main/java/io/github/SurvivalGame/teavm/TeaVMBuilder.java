@@ -1,4 +1,4 @@
-package io.github.quillraven.slimesurvivor.teavm;
+package io.github.SurvivalGame.teavm;
 
 import com.github.xpenatan.gdx.backends.teavm.config.AssetFileHandle;
 import com.github.xpenatan.gdx.backends.teavm.config.TeaBuildConfiguration;

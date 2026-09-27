@@ -1,4 +1,4 @@
-package io.github.quillraven.slimesurvivor;
+package io.github.SurvivalGame;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
@@ -20,7 +20,7 @@ public class GdxGame extends Game {
         shapeRenderer = new ShapeRenderer();
 
         // Generate font from TrueType file
-        FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("CherryCreamSoda-Regular.ttf"));
+        FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal(GameConfig.FONT_FILE));
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 24;
         parameter.color = Color.WHITE;

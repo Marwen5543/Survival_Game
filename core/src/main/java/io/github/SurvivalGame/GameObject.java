@@ -1,4 +1,4 @@
-package io.github.quillraven.slimesurvivor;
+package io.github.SurvivalGame;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;

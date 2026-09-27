@@ -1,4 +1,4 @@
-package io.github.quillraven.slimesurvivor;
+package io.github.SurvivalGame;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -44,7 +44,8 @@ public class ControlsScreen extends ScreenAdapter {
         batch.begin();
 
         float centerX = viewport.getWorldWidth() / 2;
-        float y = viewport.getWorldHeight() / 2 + 100;
+        float y = viewport.getWorldHeight() / 2 + 130;
+        float A = viewport.getWorldHeight() / 2 + 500;
 
         layout.setText(font, "CONTROLS");
         font.draw(batch, layout, centerX - layout.width / 2, y);
@@ -54,13 +55,33 @@ public class ControlsScreen extends ScreenAdapter {
         font.draw(batch, layout, centerX - layout.width / 2, y);
         y -= 40;
 
+        layout.setText(font, "SHIFT - Dash (brief invincibility)");
+        font.draw(batch, layout, centerX - layout.width / 2, y);
+        y -= 40;
+
+        layout.setText(font, "ESC - Pause");
+        font.draw(batch, layout, centerX - layout.width / 2, y);
+        y -= 40;
+
         layout.setText(font, "R - Restart (when dead)");
+        font.draw(batch, layout, centerX - layout.width / 2, y);
+        y -= 40;
+
+        layout.setText(font, "Collect glowing orbs for buffs!");
         font.draw(batch, layout, centerX - layout.width / 2, y);
         y -= 70;
 
         layout.setText(font, "Press SPACE to start");
         font.draw(batch, layout, centerX - layout.width / 2, y);
 
+
+        layout.setText(font, "This game was developed by an HP agent working from 8:00 AM to 5:00 PM,");
+        font.draw(batch, layout, centerX - layout.width / 2, A);
+        A -= 50;
+
+        layout.setText(font, "who is currently experiencing the most difficult period of his life.");
+        font.draw(batch, layout, centerX - layout.width / 2, A);
+        A -= 80;
         batch.end();
     }
 }

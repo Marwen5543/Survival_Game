@@ -1,8 +1,8 @@
-package io.github.quillraven.slimesurvivor.teavm;
+package io.github.SurvivalGame.teavm;
 
 import com.github.xpenatan.gdx.backends.teavm.TeaApplication;
 import com.github.xpenatan.gdx.backends.teavm.TeaApplicationConfiguration;
-import io.github.quillraven.slimesurvivor.GdxGame;
+import io.github.SurvivalGame.GdxGame;
 
 /**
  * Launches the TeaVM/HTML application.
