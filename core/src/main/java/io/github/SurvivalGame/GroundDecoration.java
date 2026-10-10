@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.math.MathUtils;
 
-/** Non-interactive scenery scattered across the arena so the field reads as a designed place, not empty grass. */
+/** Non-interactive scenery scattered across the arena. Colours follow the selected field theme. */
 public class GroundDecoration {
 
     public enum Type { GRASS_TUFT, ROCK, CRACK, RUNE }
@@ -16,7 +16,7 @@ public class GroundDecoration {
     private final float phase; // animation offset so runes/grass don't all pulse in sync
     private final Color color;
 
-    public GroundDecoration(float x, float y, Type type) {
+    public GroundDecoration(float x, float y, Type type, Settings.FieldTheme theme) {
         this.x = x;
         this.y = y;
         this.type = type;
@@ -25,10 +25,13 @@ public class GroundDecoration {
         this.phase = MathUtils.random(0f, MathUtils.PI2);
 
         this.color = switch (type) {
-            case GRASS_TUFT -> new Color(0.15f + MathUtils.random(0.1f), 0.35f + MathUtils.random(0.1f), 0.08f, 1f);
-            case ROCK -> new Color(0.28f, 0.27f, 0.25f, 1f);
-            case CRACK -> new Color(0.05f, 0.08f, 0.05f, 0.5f);
-            case RUNE -> new Color(0.45f, 0.65f, 0.95f, 1f);
+            case GRASS_TUFT -> new Color(
+                Math.min(1f, theme.grass.r + MathUtils.random(0.1f)),
+                Math.min(1f, theme.grass.g + MathUtils.random(0.1f)),
+                theme.grass.b, 1f);
+            case ROCK -> new Color(theme.rock);
+            case CRACK -> new Color(theme.crack);
+            case RUNE -> new Color(theme.rune);
         };
     }
 
